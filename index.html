@@ -157,45 +157,6 @@ const PRIORITY={high:{pill:'p-high',label:'High'},medium:{pill:'p-medium',label:
 const AVATARS=[{i:'JL',c:'#7F77DD',b:'#EEEDFE'},{i:'AR',c:'#1D9E75',b:'#E1F5EE'},{i:'TK',c:'#185FA5',b:'#E6F1FB'},{i:'MP',c:'#993C1D',b:'#FAECE7'},{i:'SW',c:'#854F0B',b:'#FAEEDA'}];
 const MEMBERS=['Uma Karki','Abhishek Lakandri','Sunu Dhital','Abhishek Maharjan','Nishant Tamange', 'Bhautik Golay', 'Priya Ghale', 'Saroj Lee', 'Mohan Karki', 'Habel Tamanag', 'Finjo Sherpa', 'Manisha Gurung'];
 const BCOLORS=['#7F77DD','#1D9E75','#D85A30','#185FA5','#854F0B','#D4537E'];
-
-const DEFAULT_BOARDS=[
-  {id:'b1',name:'Annual Gala 2026',color:'#7F77DD',groups:[
-    {id:'g1',name:'Venue & Logistics',color:'#7F77DD',open:true,tasks:[
-      {id:'t1',name:'Book main hall',status:'done',priority:'high',assignees:[0],due:'May 25',checked:true,notes:[]},
-      {id:'t2',name:'Arrange AV equipment',status:'inprogress',priority:'high',assignees:[1,2],due:'Jun 1',checked:false,notes:[{id:'n1',text:'Confirm speaker count with venue first',author:'Jamie L.',ts:'May 15, 10:02 AM'}]},
-      {id:'t3',name:'Confirm catering vendor',status:'inprogress',priority:'medium',assignees:[0],due:'Jun 5',checked:false,notes:[]},
-      {id:'t4',name:'Set up parking plan',status:'todo',priority:'low',assignees:[3],due:'Jun 10',checked:false,notes:[]}
-    ]},
-    {id:'g2',name:'Marketing & Invitations',color:'#1D9E75',open:true,tasks:[
-      {id:'t5',name:'Design invitation cards',status:'done',priority:'high',assignees:[2],due:'May 20',checked:true,notes:[]},
-      {id:'t6',name:'Send invites to VIP guests',status:'inprogress',priority:'high',assignees:[1],due:'May 28',checked:false,notes:[]},
-      {id:'t7',name:'Publish social media posts',status:'stuck',priority:'medium',assignees:[4],due:'Jun 2',checked:false,notes:[{id:'n3',text:'Waiting on brand approval from legal',author:'Sam W.',ts:'May 18, 9:00 AM'}]},
-      {id:'t8',name:'Create event webpage',status:'todo',priority:'medium',assignees:[2,4],due:'Jun 8',checked:false,notes:[]}
-    ]},
-    {id:'g3',name:'Day-of Coordination',color:'#D85A30',open:true,tasks:[
-      {id:'t9',name:'Assign volunteer roles',status:'todo',priority:'high',assignees:[0,3],due:'Jun 12',checked:false,notes:[]},
-      {id:'t10',name:'Print name badges',status:'todo',priority:'medium',assignees:[1],due:'Jun 14',checked:false,notes:[]},
-      {id:'t11',name:'Prepare run-of-show doc',status:'inprogress',priority:'high',assignees:[0],due:'Jun 5',checked:false,notes:[]}
-    ]}
-  ]},
-  {id:'b2',name:'Tech Conference',color:'#185FA5',groups:[
-    {id:'g4',name:'Speaker Management',color:'#185FA5',open:true,tasks:[
-      {id:'t20',name:'Confirm keynote speaker',status:'done',priority:'high',assignees:[0],due:'Apr 30',checked:true,notes:[]},
-      {id:'t21',name:'Collect speaker bios',status:'inprogress',priority:'medium',assignees:[1],due:'May 25',checked:false,notes:[]}
-    ]},
-    {id:'g5',name:'Technical Setup',color:'#854F0B',open:true,tasks:[
-      {id:'t22',name:'Test live-stream setup',status:'todo',priority:'high',assignees:[2,3],due:'Jun 3',checked:false,notes:[]},
-      {id:'t23',name:'Prepare slide templates',status:'inprogress',priority:'low',assignees:[4],due:'May 30',checked:false,notes:[]}
-    ]}
-  ]},
-  {id:'b3',name:'Charity Run',color:'#D85A30',groups:[
-    {id:'g6',name:'Registration',color:'#D85A30',open:true,tasks:[
-      {id:'t30',name:'Set up online sign-up',status:'done',priority:'high',assignees:[1],due:'May 10',checked:true,notes:[]},
-      {id:'t31',name:'Confirm route with city',status:'stuck',priority:'high',assignees:[0,2],due:'May 22',checked:false,notes:[{id:'n4',text:'Permit office backed up — follow up Thursday',author:'Jamie L.',ts:'May 16, 2:30 PM'}]}
-    ]}
-  ]}
-];
-
 const STORAGE_KEY='eventboard-standalone-v1';
 let boards=[];
 let currentBoard=0;
